@@ -23,7 +23,7 @@ async def consumer(greetings):
 @app.timer(5)
 async def producer():
     now = datetime.datetime.now()
-    await greetings_topic.send(value=f'hello, stream {now}')
+    await greetings_topic.send(value=f'hello, stream {now}, sleep 😴')
 
 
 if __name__ == '__main__':
